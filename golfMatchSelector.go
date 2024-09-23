@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/anonyindian/go-random" )
+
 
 func players(){
 	var playerCount int
@@ -42,8 +45,12 @@ func players(){
 	}
 }
 
-
+func course(){
+	courses := []string{"Polo Fields Country Club", "Oldham County Country Club", "Persimmon Ridge", "Lake Forest Country Club", "Shelby County Country Club"}
+	fmt.Println("You will play at: " + random.ChoiceString(courses))
+}
 
 func main(){
 	players()
+	course()
 }
